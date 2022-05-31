@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 input[type = "checkbox"], input[type = "radio"]{
     display: none;
 }
@@ -128,4 +132,32 @@ input[type = "checkbox"], input[type = "radio"]{
 }
 #h4:checked ~ .view .rh3{
     display: block;
+}
+
+/* Infinity animation */
+@keyframes infinityAnimation {
+    from{
+        transform: translate(0);        
+    }
+    to{
+        transform: translate(calc(0px - var(--itemWidth)));
+    }
+}
+
+.animation_wrapper{
+    overflow: hidden;
+    border: 1px solid;
+    --itemWidth: 105px;
+}
+
+.text_wrapper{
+    display: flex;
+    animation: infinityAnimation 1s linear infinite;
+}
+
+.text_item{
+    padding: 10px;
+    flex-shrink: 0;
+    width: var(--itemWidth);
+
 }
