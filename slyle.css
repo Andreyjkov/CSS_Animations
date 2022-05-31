@@ -1,0 +1,135 @@
+input[type = "checkbox"], input[type = "radio"]{
+    display: none;
+}
+
+.c1{
+    background-color: #00f;
+}
+
+#c1:checked ~ .view .c1{
+    background-color: #f00;
+}
+
+/*AND*/
+
+#d1:checked ~ .view .and-a{
+    background-color: #f00;
+}
+
+#d2:checked ~ .view .and-b{
+    background-color: #f00;
+}
+
+#d1:checked ~ #d2:checked ~ .view .and-result{
+    background-color: #f00;
+}
+
+/*OR */
+
+#e1:checked ~ .view .or-a{
+    background-color: #f00;
+}
+
+#e2:checked ~ .view .or-b{
+    background-color: #f00;
+}
+
+#e1:checked ~ .view .or-result{
+    background-color: #f00;
+}
+
+#e2:checked ~ .view .or-result{
+    background-color: #f00;
+}
+
+/*XOR */
+
+#f1:checked ~ .view .xor-a{
+    background-color: #f00;
+}
+
+#f2:checked ~ .view .xor-b{
+    background-color: #f00;
+}
+
+#f1:not(:checked) ~ #f2:checked ~ .view .xor-result{
+    background-color: #f00;
+}
+
+#f1:checked ~ #f2:not(:checked) ~ .view .xor-result{
+    background-color: #f00;
+}
+
+/*Radio Group*/
+
+#g1:checked ~ .view .g1{
+    background-color: #f00;
+}
+#g2:checked ~ .view .g2{
+    background-color: #f00;
+}
+#g3:checked ~ .view .g3{
+    background-color: #f00;
+}
+#g4:checked ~ .view .g4{
+    background-color: #f00;
+}
+
+/*Sleder*/
+
+.arrow-container{
+    position: relative;
+}
+
+.arrow{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+}
+
+#h1:checked ~ .view .h1{
+    background-color: #f00;
+}
+#h2:checked ~ .view .h2{
+    background-color: #f00;
+}
+#h3:checked ~ .view .h3{
+    background-color: #f00;
+}
+#h4:checked ~ .view .h4{
+    background-color: #f00;
+}
+
+.arrow{
+    display: none;
+}
+
+#h1:checked ~ .view .lh2{
+    display: block;
+}
+#h2:checked ~ .view .lh3{
+    display: block;
+}
+#h3:checked ~ .view .lh4{
+    display: block;
+}
+#h4:checked ~ .view .lh1{
+    display: block;
+}
+
+#h1:checked ~ .view .rh4{
+    display: block;
+}
+#h2:checked ~ .view .rh1{
+    display: block;
+}
+#h3:checked ~ .view .rh2{
+    display: block;
+}
+#h4:checked ~ .view .rh3{
+    display: block;
+}
