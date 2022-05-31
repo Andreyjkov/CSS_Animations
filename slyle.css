@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
 }
+    
+/* Simple demo */
 
 input[type = "checkbox"], input[type = "radio"]{
     display: none;
@@ -136,18 +138,20 @@ input[type = "checkbox"], input[type = "radio"]{
 
 /* Infinity animation */
 @keyframes infinityAnimation {
+
     from{
         transform: translate(0);        
     }
     to{
         transform: translate(calc(0px - var(--itemWidth)));
     }
+
 }
 
 .animation_wrapper{
     overflow: hidden;
     border: 1px solid;
-    --itemWidth: 105px;
+    --itemWidth: 90px;
 }
 
 .text_wrapper{
@@ -159,5 +163,42 @@ input[type = "checkbox"], input[type = "radio"]{
     padding: 10px;
     flex-shrink: 0;
     width: var(--itemWidth);
+}
 
+/* Animation2 demo */
+
+@keyframes boxAnimation {
+    0%{
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+        width: 10px;
+        height: 100%;
+    }
+    100%{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.animation2_wrapper{
+    overflow: hidden;
+    border: 1px solid;
+    padding: 30px;
+}
+
+.animated_sizer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated_box{
+    width: 100%;
+    height: 100%;
+    background-color: #00f;
+    animation: boxAnimation 2s linear infinite alternate;
 }
