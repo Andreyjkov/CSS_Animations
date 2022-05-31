@@ -82,7 +82,7 @@ input[type = "checkbox"], input[type = "radio"]{
 }
 
 .arrow{
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -102,10 +102,6 @@ input[type = "checkbox"], input[type = "radio"]{
 }
 #h4:checked ~ .view .h4{
     background-color: #f00;
-}
-
-.arrow{
-    display: none;
 }
 
 #h1:checked ~ .view .lh2{
