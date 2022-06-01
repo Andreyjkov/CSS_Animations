@@ -1,0 +1,51 @@
+.book{
+   height: 200px;
+   width: 100px;
+   margin-left: 100px;
+   position: relative;
+   perspective: 600px;
+   background-color: #f88;
+   transform-style: preserve-3d;
+}
+
+.page{
+    transition: ease-out 1s;
+    width: 100%;
+    height: 100%;
+    background-color: #f00;
+    position: absolute;
+    transform-origin: left top;
+    border-right: 1px solid #900;
+}
+.page1{
+    background-color: #f00 ;
+    border-color: #900;
+    transition-delay: 0ms;
+}
+.page2{
+    background-color: #ff0;
+    border-color: #990;
+    transition-delay: 100ms;
+}
+.page3{
+    background-color: #f0f;
+    border-color: #909;
+    transition-delay: 200ms;
+}
+
+.book:hover .page{
+    border-right-width: 5px;
+}
+
+.book:hover .page1{
+    transform:rotateY(-140deg);
+    transition-delay: 200ms;
+}
+.book:hover .page2{
+    transform:rotateY(-150deg);
+    transition-delay: 100ms;
+}
+.book:hover .page3{
+    transform:rotateY(-160deg);
+    transition-delay: 0ms;
+}
